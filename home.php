@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-				<h1>Website Title</h1>
+				<h1>Basisrausch Servicetool</h1>
 				<a href="home.php"><i class="fas fa-user-circle"></i>Home</a>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="protokoll.php"><i class="fas fa-user-circle"></i>Prüfprotokoll</a>
