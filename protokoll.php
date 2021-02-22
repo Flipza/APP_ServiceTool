@@ -38,15 +38,17 @@ $result1 = mysqli_query($connect, $query);
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
-        <select name=serialnumbers class="dropdown">
+        <div>
+            <select name=serialnumbers class="dropdown">
 
-            <?php while($row1 = mysqli_fetch_array($result1)):;?>
+                <?php while($row1 = mysqli_fetch_array($result1)):;?>
 
-            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+                <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
 
-            <?php endwhile;?>
+                <?php endwhile;?>
 
-        </select>
+            </select>
+        </div>
     </body>
 
 </html>
