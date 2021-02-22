@@ -39,7 +39,7 @@ $result1 = mysqli_query($connect, $query);
 			</div>
 		</nav>
         <div>
-            <select name=serialnumbers width="300" style="width: 300px">
+            <select name=serialnumbers class="dropdown">
 
                 <?php while($row1 = mysqli_fetch_array($result1)):;?>
 
