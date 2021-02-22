@@ -46,4 +46,6 @@ while($row = mysqli_fetch_array($result))
         <select>
             <?php echo $options;?>
         </select>
-    
+    </body>
+
+</html>
