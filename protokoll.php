@@ -38,7 +38,7 @@ $result1 = mysqli_query($connect, $query);
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
-        <select name=serialnumbers size=2>
+        <select name=serialnumbers class="dropdown">
 
             <?php while($row1 = mysqli_fetch_array($result1)):;?>
 
