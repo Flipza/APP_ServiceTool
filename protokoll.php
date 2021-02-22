@@ -16,7 +16,14 @@ if (mysqli_connect_errno()) {
 }
 // php select option value from database
 $query = "SELECT serialnumber FROM mgp_db";
-$result1 = mysqli_query($connect, $query);
+$result2 = mysqli_query($connect, $query);
+
+$options = "";
+
+while($row2 = mysqli_fetch_array($result2))
+{
+    $options = $options."<option>$row2[0]</option>";
+}
 
 
 ?>
@@ -40,13 +47,7 @@ $result1 = mysqli_query($connect, $query);
 		</nav>
         <div>
             <select name=serialnumbers class="dropdown">
-
-                <?php while($row1 = mysqli_fetch_array($result1)):;?>
-
-                <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
-
-                <?php endwhile;?>
-
+                <?php echo $options;?>
             </select>
         </div>
     </body>
