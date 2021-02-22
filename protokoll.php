@@ -38,10 +38,11 @@ $result1 = mysqli_query($connect, $query);
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
+        <br></br>
         <div>
             <form action="">
                 <label for="serialnumbers">Serial Number: </label>
-                <select name=serialnumbers class="dropdown">
+                <select id="sn_select" name=serialnumbers class="dropdown">
                     <?php while($row1 = mysqli_fetch_array($result1)):;?>
                     <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
                     <?php endwhile;?>
@@ -49,6 +50,9 @@ $result1 = mysqli_query($connect, $query);
                 <br></br>
                 <input type="submit" value="Auswahl">
             </form>
+            <br></br>
+            <label id="man">Manufacturer: </label>
+            <label id="man_res">PLATZHALTER</label>
         </div>
     </body>
 
