@@ -16,14 +16,7 @@ if (mysqli_connect_errno()) {
 }
 // php select option value from database
 $query = "SELECT serialnumber FROM mgp_db";
-$result2 = mysqli_query($connect, $query);
-
-$options = "";
-
-while($row2 = mysqli_fetch_array($result2))
-{
-    $options = $options."<option>$row2[0]</option>";
-}
+$result1 = mysqli_query($connect, $query);
 
 
 ?>
@@ -31,7 +24,7 @@ while($row2 = mysqli_fetch_array($result2))
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Profile Page</title>
+		<title>Protokoll Page</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
@@ -47,7 +40,9 @@ while($row2 = mysqli_fetch_array($result2))
 		</nav>
         <div>
             <select name=serialnumbers class="dropdown">
-                <?php echo $options;?>
+                <?php while($row1 = mysqli_fetch_array($result1)):;?>
+                <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+                <?php endwhile;?>
             </select>
         </div>
     </body>
