@@ -39,11 +39,16 @@ $result1 = mysqli_query($connect, $query);
 			</div>
 		</nav>
         <div>
-            <select name=serialnumbers class="dropdown">
-                <?php while($row1 = mysqli_fetch_array($result1)):;?>
-                <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
-                <?php endwhile;?>
-            </select>
+            <form action="">
+                <label for="serialnumbers">Serial Number: </label>
+                <select name=serialnumbers class="dropdown">
+                    <?php while($row1 = mysqli_fetch_array($result1)):;?>
+                    <option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+                    <?php endwhile;?>
+                </select>
+                <br></br>
+                <input type="submit" value="Auswahl">
+            </form>
         </div>
     </body>
 
