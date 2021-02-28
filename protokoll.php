@@ -64,8 +64,11 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
                 <input type="submit" value="Auswahl">
             </form>
             <br></br>
-			<input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">
-			<br></br>
+			<div class=".col-md-6">
+    		<div class="panel panel-default">
+    		<div class="bs-example">
+        		<input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">
+    		</div>
             <label id="man">Manufacturer: </label>
             <label id="man_res">PLATZHALTER</label>
         </div>
