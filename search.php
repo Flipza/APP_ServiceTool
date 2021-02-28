@@ -5,7 +5,7 @@
     $query=mysqli_query($con, "select * from mpg_db where serialnumber LIKE '%{$key}%'");
     while($row=mysqli_fetch_assoc($query))
     {
-      $array[] = $row['title'];
+      $array[] = $row['serialnumber'];
     }
     echo json_encode($array);
     mysqli_close($con);
