@@ -26,8 +26,18 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 	<head>
 		<meta charset="utf-8">
 		<title>Protokoll Page</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">        </script>
-     	<script src="typeahead.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    	<script src="typeahead.min.js"></script>
+    	<script>
+    		$(document).ready(function(){
+    		$('input.typeahead').typeahead({
+        		name: 'typeahead',
+        		remote:'search.php?key=%QUERY',
+        		limit : 10
+    			});
+			});
+    	</script>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
@@ -54,17 +64,8 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
                 <input type="submit" value="Auswahl">
             </form>
             <br></br>
-			<input type="text" name="typeahead">
+			<input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">
 			<br></br>
-			<script>
-    			$(document).ready(function(){
-    			$('input.typeahead').typeahead({
-        			name: 'typeahead',
-        			remote:'search.php?key=%QUERY',
-        			limit : 10
-    					});
-				});
-    		</script>
             <label id="man">Manufacturer: </label>
             <label id="man_res">PLATZHALTER</label>
         </div>
