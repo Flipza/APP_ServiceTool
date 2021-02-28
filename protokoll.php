@@ -14,6 +14,7 @@ $connect = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATAB
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+
 // php select option value from database
 $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
@@ -26,18 +27,6 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 	<head>
 		<meta charset="utf-8">
 		<title>Protokoll Page</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    	<script src="typeahead.min.js"></script>
-    	<script>
-    		$(document).ready(function(){
-    		$('input.typeahead').typeahead({
-        		name: 'typeahead',
-        		remote:'search.php?key=%QUERY',
-        		limit : 10
-    			});
-			});
-    	</script>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
@@ -53,7 +42,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		</nav>
         <br></br>
         <div>
-            <form action="">
+            <form method="post" action="">
                 <label for="serialnumbers">Serial Number: </label>
                 <select id="sn_select" name="serialnumber" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
@@ -64,11 +53,6 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
                 <input type="submit" value="Auswahl">
             </form>
             <br></br>
-			<div class=".col-md-6">
-    		<div class="panel panel-default">
-    		<div class="bs-example">
-        		<input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Type your Query">
-    		</div>
             <label id="man">Manufacturer: </label>
             <label id="man_res">PLATZHALTER</label>
         </div>
