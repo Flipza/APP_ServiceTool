@@ -44,7 +44,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
             <form action="">
                 <label for="serialnumbers">Serial Number: </label>
                 <select id="sn_select" name="serialnumber" class="dropdown">
-					<?php while($row1 = mysqli_fetch_array($query_sn)):;?>
+					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
 					<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
