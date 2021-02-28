@@ -15,8 +15,9 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // php select option value from database
-$query = "SELECT serialnumber FROM mgp_db";
-$result1 = mysqli_query($connect, $query);
+$query_sn = "SELECT serialnumber FROM mgp_db";
+$result_sn = mysqli_query($connect, $query_sn);
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='2469P43553'";
 
 
 ?>
