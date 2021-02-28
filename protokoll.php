@@ -36,7 +36,6 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 				<a href="home.php"><i class="fas fa-user-circle"></i>Home</a>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="protokoll.php"><i class="fas fa-user-circle"></i>Prüfprotokoll</a>
-				<a href="search.php"><i class="fas fa-user-circle"></i>Suchfunktion</a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
