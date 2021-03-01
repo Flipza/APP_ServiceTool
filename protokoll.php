@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
 // php select option value from database
 $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
-//$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber=selected_sn";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber=selected_sn";
 $result_dropdown = mysqli_query($connect, $query2);
 
 
