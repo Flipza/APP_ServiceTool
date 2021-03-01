@@ -10,15 +10,16 @@ if (mysqli_connect_errno()) {
 
 // php select option value from database
 $selected_sn = ($_REQUEST['selected_sn']);
-$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
-//$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
+//$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 
 $db_id = mysqli_query($connect, $query2);
+$result_dropdown = [];
 while ($row = mysqli_fetch_array($db_id)) {
-    $result_dropdown = (object) ["manufacturer"=>$row[0], "model"=>$row[1]];
+    array_push ($result_dropdown, (object) ["manufacturer"=>$row[0], "model"=>$row[1]]);
     //echo "guguus";
 }
 
 
-echo $result_dropdown;
+return $result_dropdown;
 ?>
