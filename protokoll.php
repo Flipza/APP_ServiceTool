@@ -29,6 +29,13 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		<title>Protokoll Page</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			$(document).ready(function(){
+    		/* Hier der jQuery-Code */
+    		alert('Hallo Welt');
+			});
+		</script>
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
@@ -46,7 +53,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
-					<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
                 <br></br>
