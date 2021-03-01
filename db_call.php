@@ -13,4 +13,5 @@ $selected_sn = floatval($_REQUEST['selected_sn']);
 $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber=selected_sn";
 $result_dropdown = mysqli_query($connect, $query2);
 echo $result_dropdown;
+alert($result_dropdown)
 ?>
