@@ -18,8 +18,8 @@ $db_id = mysqli_query($connect, $query2);
     //$result_dropdown = $row[0];
     //echo "guguus";
 //}
-while ($row = mysql_fetch_array($db_id, MYSQLI_NUM)) {
-    $result_dropdown = ("manufacturer: %s  model: %s  size: %s  color: %s  year: %s", $row[0], $row[1], $row[2], $row[3], $row[4]);
+while ($row = mysql_fetch_array($db_id, MYSQLI_ASSOC)) {
+    $result_dropdown = array("manufacturer: %s  model: %s  size: %s  color: %s  year: %s", $row[0], $row[1], $row[2], $row[3], $row[4]);
 }
 
 echo $result_dropdown;
