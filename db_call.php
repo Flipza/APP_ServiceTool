@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) {
 }
 
 // php select option value from database
-$selected_sn = floatval($_REQUEST['selected_sn']);
+$selected_sn = ($_REQUEST['selected_sn']);
 print_r($_REQUEST);
 echo $selected_sn;
 $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber=selected_sn";
