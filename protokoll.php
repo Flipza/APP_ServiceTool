@@ -33,7 +33,8 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		<script>
 			$(document).ready(function(){
     		/* Hier der jQuery-Code */
-    		alert('Hallo Welt');
+    		$('#selectBox').val();
+			alertsel($('#ectBox').val());
 			});
 		</script>
 	</head>
