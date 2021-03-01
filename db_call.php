@@ -10,10 +10,10 @@ if (mysqli_connect_errno()) {
 
 // php select option value from database
 $selected_sn = ($_REQUEST['selected_sn']);
-print_r($_REQUEST);
-echo $selected_sn;
+//print_r($_REQUEST);
+//echo $selected_sn;
 $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
-echo $query2;
+//echo $query2;
 $db_id = mysqli_query($connect, $query2);
 while ($row = mysqli_fetch_array($db_id)) {
     $result_dropdown = $row[0];
