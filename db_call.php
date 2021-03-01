@@ -10,22 +10,17 @@ if (mysqli_connect_errno()) {
 
 // php select option value from database
 $selected_sn = ($_REQUEST['selected_sn']);
-$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
-//$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
+//$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 
 $db_id = mysqli_query($connect, $query2);
-while ($row = mysqli_fetch_array($db_id)) {
-    $result_dropdown = $row[0];
-    //echo "guguus";
-}
-//while ($row = mysqli_fetch_array($db_id, MYSQLI_ASSOC)) {
-    //manufacturer: ".$row["manufacturer"].";
-    //model: ".$row["model"].";
-    //size: ".$row["size"].";
-    //color: ".$row["color"].";
+//while ($row = mysqli_fetch_array($db_id)) {
     //$result_dropdown = $row[0];
     //echo "guguus";
 //}
+while ($row = mysql_fetch_array($db_id, MYSQL_NUM)) {
+    printf("manufacturer: %s  model: %s  size: %s  color: %s  year: %s", $row[0], $row[1], $row[2], $row[3], $row[4]);
+}
 
 echo $result_dropdown;
 ?>
