@@ -19,7 +19,7 @@ $db_id = mysqli_query($connect, $query2);
     //echo "guguus";
 //}
 while ($row = mysqli_fetch_array($db_id)) {
-    $result_dropdown = $row[0];
+    $result_dropdown = $row[1];
     //echo "guguuuus";
 }
 
