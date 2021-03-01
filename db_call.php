@@ -14,20 +14,11 @@ $selected_sn = ($_REQUEST['selected_sn']);
 $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 
 $db_id = mysqli_query($connect, $query2);
-//while ($row = mysqli_fetch_array($db_id)) {
-    //$result_dropdown = $row[0];
+while ($row = mysqli_fetch_array($db_id)) {
+    $result_dropdown = $row[0];
     //echo "guguus";
-//}
-
-// TEST für Rückgabe mit array
-$column = array();
-
-while($row = mysql_fetch_array($db_id)){
-    $column[] = $row[$key];
-//Edited - added semicolon at the End of line.1st and 4th(prev) line
-
 }
 
-//echo $result_dropdown;
-echo $column;
+
+echo $result_dropdown;
 ?>
