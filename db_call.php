@@ -18,14 +18,14 @@ $db_id = mysqli_query($connect, $query2);
     //$result_dropdown = $row[0];
     //echo "guguus";
 //}
-while ($row = mysqli_fetch_array($db_id)) {
+$row = mysqli_fetch_array($db_id)
     $res_man = $row[0];
     $res_model = $row[1];
     $res_size = $row[2];
     $res_color = $row[3];
     $res_year = $row[4];
     //echo "guguuuus";
-}
+
 
 echo $result_array($res_man, $res_model, $res_size, $res_color, $res_year);
 //echo $result_dropdown;
