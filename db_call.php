@@ -15,5 +15,6 @@ echo $selected_sn;
 $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
 echo $query2;
 $result_dropdown = mysqli_query($connect, $query2);
+$result_dropdown = "guguus";
 echo $result_dropdown;
 ?>
