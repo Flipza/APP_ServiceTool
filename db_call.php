@@ -15,9 +15,13 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 
 $db_id = mysqli_query($connect, $query2);
 $result_dropdown = [];
+$testrow = (object) [];
 while ($row = mysqli_fetch_array($db_id)) {
-    array_push ($result_dropdown, (object) ["manufacturer"=>$row[0], "model"=>$row[1]]);
-    //echo "guguus";
+    echo($row);
+    $testrow = (object) ["manufacturer"=>$row[0], "model"=>$row[1]];
+    echo($testrow);
+    array_push ($result_dropdown, $testrow);
+    echo "guguus";
 }
 
 
