@@ -19,7 +19,7 @@ $db_id = mysqli_query($connect, $query2);
     //echo "guguus";
 //}
 while ($row = mysqli_fetch_array($db_id)) {
-    $result_dropdown = array("manufacturer" => '$row[0]', "model" => '$row[1]');
+    $result_dropdown = ["manufacturer" => $row[0], "model" => $row[1]];
     //echo "guguuuus";
 }
 
