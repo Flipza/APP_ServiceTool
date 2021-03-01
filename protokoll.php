@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
 // php select option value from database
 $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
-$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber=selected_sn";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='selected_sn'";
 $result_dropdown = mysqli_query($connect, $query2);
 
 
@@ -35,7 +35,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 			$(document).ready(function(){
 				$("select.dropdown").change(function(){
         		var selected_sn = $(this).children("option:selected").val();
-        		alert("You have selected the SN: " + selected_sn);
+        		//alert("You have selected the SN: " + selected_sn);
 				$.get("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 				var result = data[0];
 				$('#man_res').val(result.manufacturer);
