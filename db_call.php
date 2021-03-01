@@ -16,10 +16,19 @@ $selected_sn = ($_REQUEST['selected_sn']);
 $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 //echo $query2;
 $db_id = mysqli_query($connect, $query2);
-while ($row = mysqli_fetch_array($db_id)) {
-    $result_dropdown = $row[0];
+//while ($row = mysqli_fetch_array($db_id)) {
+    //$result_dropdown = $row[0];
     //echo "guguus";
-    echo $result_dropdown;
+//}
+while ($row = mysqli_fetch_array($db_id, MYSQLI_ASSOC)) {
+    $result_dropdown = {
+    manufacturer: ".$row["manufacturer"].";
+    model: ".$row["model"].";
+    size: ".$row["size"].";
+    color: ".$row["color"].";
+    }
+    //$result_dropdown = $row[0];
+    //echo "guguus";
 }
 
 echo $result_dropdown;
