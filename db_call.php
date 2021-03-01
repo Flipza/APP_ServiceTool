@@ -19,7 +19,6 @@ $testrow = (object) [];
 while ($row = mysqli_fetch_array($db_id)) {
     echo($row);
     $testrow = (object) ["manufacturer"=>$row[0], "model"=>$row[1]];
-    echo($testrow);
     array_push ($result_dropdown, $testrow);
     echo "guguus";
 }
