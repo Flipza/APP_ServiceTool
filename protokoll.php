@@ -18,7 +18,8 @@ if (mysqli_connect_errno()) {
 // php select option value from database
 $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
-$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='2469P43553'";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber=selected_sn";
+$result_dropdown = mysqli_query($connect, $query2);
 
 
 ?>
@@ -33,8 +34,11 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		<script>
 			$(document).ready(function(){
 				$("select.dropdown").change(function(){
-        		var selectedsn = $(this).children("option:selected").val();
-        		alert("You have selected the country - " + selectedsn);
+        		var selected_sn = $(this).children("option:selected").val();
+        		//alert("You have selected the SN: " + selected_sn);
+				$.get("http://localhost/var/www/simpli-biits/db_call.php", {serialnumber: selected_sn}, function(data){
+        		var result = jQuery.parseJSON(data);
+        		$('#mod_res').val(result);});
 				});
 			});
 		</script>
@@ -62,8 +66,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
                 <input id='btn1' type="button" value="Auswahl">
             </form>
             <br></br>
-            <label name="man">Manufacturer: </label>
-            <label name="man_res">PLATZHALTER</label>
+			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
 			<br></br>
             <label name="mod">Model: </label>
             <label name="mod_res">PLATZHALTER</label>
