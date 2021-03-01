@@ -32,9 +32,11 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		<script src="https://code.jquery.com/jquery-latest.js"></script>
 		<script>
 			$(document).ready(function(){
-    		/* Hier der jQuery-Code */
-    		$('#selectBox').val();
-			alert($('#selectBox').val());
+				$('#btn1').click(function() {
+    				/* Hier der jQuery-Code */
+    				$('#selectBox').val();
+					alert($('#selectBox').val());
+				});
 			});
 		</script>
 	</head>
@@ -58,7 +60,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 					<?php endwhile;?>
                 </select>
                 <br></br>
-                <input type="submit" value="Auswahl">
+                <input id='btn1' type="button" value="Auswahl">
             </form>
             <br></br>
             <label name="man">Manufacturer: </label>
