@@ -40,8 +40,8 @@ $result_dropdown = mysqli_query($connect, $query2);
 				$.get("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
         		var result = data;
 				//var result = "test";
-				//alert(result);
-        		$('#man_res').val(result[0]);
+				alert(result);
+        		$('#man_res').val(result);
 				});
 				});
 			});
