@@ -72,17 +72,13 @@ $result_dropdown = mysqli_query($connect, $query2);
             <br></br>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
 			<br></br>
-            <label name="mod">Model: </label>
-            <label name="mod_res">PLATZHALTER</label>
+			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res' readonly/> </p>
 			<br></br>
-            <label name="year">Year: </label>
-            <label name="year_res">PLATZHALTER</label>
+			<p>Year: <input type='text'  size='40' id='year_res' name='year_res' readonly/> </p>
 			<br></br>
-            <label name="size">Size: </label>
-            <label name="size_res">PLATZHALTER</label>
+			<p>Size: <input type='text'  size='40' id='size_res' name='size_res' readonly/> </p>
 			<br></br>
-            <label name="color">Color: </label>
-            <label name="color_res">PLATZHALTER</label>
+			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
         </div>
     </body>
 

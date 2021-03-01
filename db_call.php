@@ -12,12 +12,14 @@ if (mysqli_connect_errno()) {
 $selected_sn = ($_REQUEST['selected_sn']);
 //print_r($_REQUEST);
 //echo $selected_sn;
-$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
+//$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 //echo $query2;
 $db_id = mysqli_query($connect, $query2);
 while ($row = mysqli_fetch_array($db_id)) {
     $result_dropdown = $row[0];
     //echo "guguus";
+    echo $result_dropdown;
 }
 
 echo $result_dropdown;
