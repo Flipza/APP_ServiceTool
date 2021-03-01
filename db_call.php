@@ -17,6 +17,7 @@ echo $query2;
 $db_id = mysqli_query($connect, $query2);
 while ($row = mysql_fetch_array($db_id, MYSQL_NUM)) {
     $result_dropdown = $row[0];
+    echo "guguus";
 }
 
 echo $result_dropdown;
