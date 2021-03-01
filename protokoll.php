@@ -32,7 +32,7 @@ $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE seria
 		<script src="https://code.jquery.com/jquery-latest.js"></script>
 		<script>
 			$(document).ready(function(){
-				$("select.serialnumber").change(function(){
+				$("select.dropdown").change(function(){
         		var selectedsn = $(this).children("option:selected").val();
         		alert("You have selected the country - " + selectedsn);
 				});
