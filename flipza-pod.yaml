@@ -2,10 +2,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    app.kubernetes.io/name: flipza
-  name: apache
-  namespace: yaml
+    app.kubernetes.io/name: servicetool
+  name: servicetool
 spec:
   containers:
-  - image: flipza
-    name: flipza
+  - image: servicetool
+    name: servicetool
