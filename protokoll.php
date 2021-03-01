@@ -42,7 +42,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 				var result = "test";
 				alert(result);
         		$('#man_res').val(result);
-				});
+				//});
 				});
 			});
 		</script>
