@@ -15,7 +15,7 @@ echo $selected_sn;
 $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
 echo $query2;
 $db_id = mysqli_query($connect, $query2);
-while ($row = mysqli_fetch_array($db_id, MYSQL_NUM)) {
+while ($row = mysqli_fetch_array($db_id)) {
     $result_dropdown = $row[0];
     echo "guguus";
 }
