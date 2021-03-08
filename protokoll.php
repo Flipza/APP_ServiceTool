@@ -39,7 +39,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 				$.get("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 				var result = data[0];
 				$('#man_res').val(result.manufacturer);
-				$('#mod_res').val(result.model);
+				//$('#mod_res').val(result.model);
 				});
 			});
 		});
