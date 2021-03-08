@@ -39,7 +39,7 @@ if ($mysqli->query($sql)){
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
-            let record_added = "<?php echo $php_variable; ?>"
+            let record_added = "<?php echo $record_added; ?>"
             function warnung() {
                 if (record_added = 1){
                     alert('Records added successfully.')
