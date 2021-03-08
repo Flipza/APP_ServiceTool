@@ -23,7 +23,7 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
     if ($mysqli->query($sql)){
         echo "Records added successfully.";
-        header('Location: index.html');
+        header('Location: protokoll.php');
 	    exit;
     } else{
         echo "ERROR: Failed to execute $sql. ";
