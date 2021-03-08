@@ -12,7 +12,11 @@ if (mysqli_connect_errno()) {
 $sql = ($_REQUEST['sql']);
 //$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
 //$query_sn = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
-$db_id = mysqli_query($connect, $sql);
+if (mysqli_query($connect, $sql){
+    echo "New Record created successfully!";
+} else {
+    echo "Error";
+}
 alert("Row Inserted!")
 
 ?>

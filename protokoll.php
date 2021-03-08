@@ -68,7 +68,7 @@ $result_st = mysqli_query($connect, $query_st);
 				let year = document.getElementById("year_res").value;
 				let sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+sn+", "+man+", "+mod+", "+size+", "+color+", "+year+");";
 				alert(sql);
-				$.getJSON("https://www.simpli-biits.ch/insert_db.php", {sql: sql});
+				window.location.href="https://www.simpli-biits.ch/insert_db.php?sql=sql";
 			}
 		</script>
 	</head>
