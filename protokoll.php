@@ -23,7 +23,9 @@ $result_dropdown = mysqli_query($connect, $query2);
 // Mitarbeiter SQL
 $query_ma = "SELECT inspector FROM tbl_ma";
 $result_ma = mysqli_query($connect, $query_ma);
-
+// Standorte SQL
+$query_st = "SELECT standort FROM tbl_ort";
+$result_st = mysqli_query($connect, $query_ma);
 
 ?>
 <!DOCTYPE html>
@@ -81,9 +83,13 @@ $result_ma = mysqli_query($connect, $query_ma);
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
 			<br></br>
 		<h2>Maintenance Glider Protokol</h2>
-		<br></br>
 		<h3>General</h3>
-		<p>Location: <input type='text'  size='40' id='loc_res' name='loc_res' readonly/> </p>
+		<label for="location">Location: </label>
+		<select name="location" class="dropdown">
+					<?php while($row1 = mysqli_fetch_array($result_st)):;?>
+						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+					<?php endwhile;?>
+                </select>
 		<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
 		<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
 		<label for="inspector">Inspector: </label>
