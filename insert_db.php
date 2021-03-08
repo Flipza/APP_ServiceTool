@@ -23,6 +23,8 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
     if ($mysqli->query($sql)){
         echo "Records added successfully.";
+        header('Location: index.html');
+	    exit;
     } else{
         echo "ERROR: Failed to execute $sql. ";
     }
