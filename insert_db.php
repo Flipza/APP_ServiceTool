@@ -41,6 +41,7 @@ if ($mysqli->query($sql)){
         <script>
             var record_added = "<?php echo $record_added; ?>"
             function warnung() {
+                alert(record_added)
                 if (record_added = 1){
                     alert('Records added successfully.')
                     document.location.href = "https://www.simpli-biits.ch/protokoll.php"
