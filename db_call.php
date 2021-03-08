@@ -16,9 +16,8 @@ $query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
 $db_id = mysqli_query($connect, $query2);
 while ($row = mysqli_fetch_array($db_id)) {
     $result_dropdown = $row[0];
-    echo $result_dropdown;
 }
 
 
-return $result_dropdown;
+echo $result_dropdown;
 ?>
