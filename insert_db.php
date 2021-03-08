@@ -55,5 +55,4 @@ if (!empty($sn) || !empty($man) || !empty($mod) || !empty($size) || !empty($year
     echo "All field are required";
     die();
    }
-   ?>
 ?>
