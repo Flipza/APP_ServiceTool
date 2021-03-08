@@ -67,9 +67,31 @@ $result_st = mysqli_query($connect, $query_st);
 				let color = document.getElementById("color_res").value;
 				let year = document.getElementById("year_res").value;
 				let sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+sn+", "+man+", "+mod+", "+size+", "+color+", "+year+");";
+				let gleitschirm = {
+					"Serialnumber" : sn,
+					"Manufacturer" : man,
+				}
 				alert(sql);
-				window.location.href="https://www.simpli-biits.ch/insert_db.php?sql=sql";
+				return sql;
 			}
+			/*
+			$(document).ready(function() {
+  					$("#btn_erf").click(function () {
+					// Val wird Anzeigeelemnet zugewiesen        
+					$.ajax({
+           				type: "POST",
+           				url: "https://www.simpli-biits.ch/insert_db.php",
+           				dataType: "json",
+           				success: function (msg) {
+               				if (msg) {
+                   				alert("Somebody" + name + " was added in list !");
+                   				location.reload(true);
+               					} else {
+                   					alert("Cannot add to list !");
+               						}
+           					}
+					}		
+		*/
 		</script>
 	</head>
 	<body class="loggedin">
@@ -85,14 +107,13 @@ $result_st = mysqli_query($connect, $query_st);
         <br></br>
         <div>
 		<h1>Deckblatt</h1>
-            <form method="post" action="">
+            <form action="https://www.simpli-biits.ch/insert_db.php" method="POST">
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown_sn">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-            </form>
             <br></br>
 			<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res'/> </p>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res'/> </p>
@@ -100,7 +121,8 @@ $result_st = mysqli_query($connect, $query_st);
 			<p>Year: <input type='text'  size='40' id='year_res' name='year_res'/> </p>
 			<p>Size: <input type='text'  size='40' id='size_res' name='size_res'/> </p>
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
-			<button onclick='insertDB()'>Erfassen</button>
+			<button onclick='' id="btn_erf">Erfassen</button>
+			</form>
 			<br></br>
 		<h1>Maintenance Glider Protokol</h1>
 		<h3>General</h3>

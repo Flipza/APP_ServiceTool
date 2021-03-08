@@ -9,7 +9,14 @@ if (mysqli_connect_errno()) {
 }
 
 // php select option value from database
-$sql = ($_REQUEST['sql']);
+$sn = htmlspecialchars($_POST['sn_res']);
+$man = htmlspecialchars($_POST['man_res']);
+$mod = htmlspecialchars($_POST['mod_res']);
+$size = htmlspecialchars($_POST['size_res']);
+$year = htmlspecialchars($_POST['year_res']);
+$color = htmlspecialchars($_POST['color_res']);
+
+$sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+$sn+", "+$man+", "+$mod+", "+$size+", "+$color+", "+$year+");";
 //$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
 //$query_sn = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
 if (mysqli_query($connect, $sql){
