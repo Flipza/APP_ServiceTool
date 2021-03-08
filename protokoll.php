@@ -59,6 +59,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 		</nav>
         <br></br>
         <div>
+		<h2>Deckblatt</h2>
             <form method="post" action="">
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown">
@@ -73,6 +74,12 @@ $result_dropdown = mysqli_query($connect, $query2);
 			<p>Year: <input type='text'  size='40' id='year_res' name='year_res' readonly/> </p>
 			<p>Size: <input type='text'  size='40' id='size_res' name='size_res' readonly/> </p>
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
+			<br></br>
+		<h2>Maintenance Glider Protokol</h2>
+		<br></br>
+		<h3>General</h3>
+		<p>Location: <input type='text'  size='40' id='loc_res' name='loc_res' readonly/> </p>
+		<p>Date: <input type='date' id='hasta' value='<?php echo date('Y-m-d');?>'> </p>
         </div>
     </body>
 
