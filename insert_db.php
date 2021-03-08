@@ -23,8 +23,6 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
 if ($mysqli->query($sql)){
     echo "Records added successfully.";
-    header('Location: protokoll.php');
-	exit;
 } else{
     echo "ERROR: Failed to execute $sql. ";
 }
@@ -39,9 +37,10 @@ if ($mysqli->query($sql)){
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
-              function warnung() {
+            function warnung() {
                 alert('Sie sollten doch nicht drücken!');
-  }
+                document.location.href = "https://www.simpli-biits.ch/protokoll.php";
+                }
         </script>
 	</head>
 	<body class="loggedin">
