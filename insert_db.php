@@ -22,9 +22,11 @@ $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year
 $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
 if ($mysqli->query($sql)){
-    echo "Records added successfully.";
+    //echo "Records added successfully.";
+    $record_added = 1;
 } else{
-    echo "ERROR: Failed to execute $sql. ";
+    //echo "ERROR: Failed to execute $sql. ";
+    $record_added = 0;
 }
 
 ?>
@@ -38,8 +40,14 @@ if ($mysqli->query($sql)){
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
             function warnung() {
-                alert('Records added successfully.');
+                if ($record_added = 1){
+                    alert('Records added successfully.');
+                    document.location.href = "https://www.simpli-biits.ch/protokoll.php"; 
+                } else if ($record_added = 0)
+                alert('ERROR: Failed to execute: '+$sql+'. ');
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php";
+                } else {
+                    alert('Unknown error Occured. Please Contact Admin!'); 
                 }
         </script>
 	</head>
