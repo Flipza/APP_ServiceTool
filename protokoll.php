@@ -45,11 +45,17 @@ $result_st = mysqli_query($connect, $query_st);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 					$('#sn_res').val(data['serialnumber']);
 					$('#man_res').val(data['manufacturer']);
-					$('#man_res_ro').val(data['manufacturer']);
 					$('#mod_res').val(data['model']);
 					$('#size_res').val(data['size']);
 					$('#color_res').val(data['color']);
 					$('#year_res').val(data['year']);
+					// MGP General Abschnitt ReadOnly
+					$('#sn_res_ro').val(data['serialnumber']);
+					$('#man_res_ro').val(data['manufacturer']);
+					$('#mod_res_ro').val(data['model']);
+					$('#size_res_ro').val(data['size']);
+					$('#color_res_ro').val(data['color']);
+					$('#year_res_ro').val(data['year']);
 					});
 				});
 			});
@@ -111,7 +117,12 @@ $result_st = mysqli_query($connect, $query_st);
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
+			<p>Serialnumber: <input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/> </p>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </p>
+			<p>Model: <input type='text'  size='40' id='mod_res_ro' name='mod_res' readonly/> </p>
+			<p>Year: <input type='text'  size='40' id='year_res_ro' name='year_res' readonly/> </p>
+			<p>Size: <input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </p>
+			<p>Color: <input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </p>
 		</div>
     </body>
 
