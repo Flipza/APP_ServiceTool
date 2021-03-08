@@ -20,16 +20,6 @@ while ($row = mysqli_fetch_array($db_id)) {
     $row_color = $row['color'];
     $row_year = $row['year'];
 }
-// php select option value from database
-//$selected_ma = ($_REQUEST['selected_ma']);
-//$query_ma = "SELECT vorname, nachname year FROM tbl_ma WHERE serialnumber='$selected_sn'";
-//$db_id = mysqli_query($connect, $query_sn);
-//while ($row = mysqli_fetch_array($db_id)) {
-    //$row_man = $row['manufacturer'];
-    //$row_mod = $row['model'];
-
-//}
-
 
 //echo $result_dropdown;
 $db_call_return = array("manufacturer"=>$row_man, "model"=>$row_mod, "size"=>$row_size, "color"=>$row_color, "year"=>$row_year);
