@@ -110,7 +110,8 @@ $result_st = mysqli_query($connect, $query_st);
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-        </div>
+			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
+		</div>
     </body>
 
 </html>
