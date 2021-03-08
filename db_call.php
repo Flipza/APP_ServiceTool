@@ -21,5 +21,6 @@ while ($row = mysqli_fetch_array($db_id)) {
 
 
 //echo $result_dropdown;
+$db_call_return = array("manufacturer"=>$row_man, "model"=>$row_mod);
 print json_encode($db_call_return);
 ?>
