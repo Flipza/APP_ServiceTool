@@ -66,7 +66,6 @@ $result_dropdown = mysqli_query($connect, $query2);
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-                <br></br>
             </form>
             <br></br>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
