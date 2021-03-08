@@ -45,6 +45,7 @@ $result_st = mysqli_query($connect, $query_st);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 					$('#sn_res').val(data['serialnumber']);
 					$('#man_res').val(data['manufacturer']);
+					$('#man_res_ro').val(data['manufacturer']);
 					$('#mod_res').val(data['model']);
 					$('#size_res').val(data['size']);
 					$('#color_res').val(data['color']);
@@ -110,7 +111,7 @@ $result_st = mysqli_query($connect, $query_st);
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
+			<p>Manufacturer: <input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </p>
 		</div>
     </body>
 
