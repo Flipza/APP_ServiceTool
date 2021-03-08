@@ -21,12 +21,36 @@ $year = $_POST['year_res'];
 $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year)';
 $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
-    if ($mysqli->query($sql)){
-        echo "Records added successfully.";
-        header('Location: protokoll.php');
-	    exit;
-    } else{
-        echo "ERROR: Failed to execute $sql. ";
-    }
+if ($mysqli->query($sql)){
+    echo "Records added successfully.";
+    header('Location: protokoll.php');
+	exit;
+} else{
+    echo "ERROR: Failed to execute $sql. ";
+}
 
 ?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Update Page</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script>
+              function warnung() {
+                alert('Sie sollten doch nicht drücken!');
+  }
+        </script>
+	</head>
+	<body class="loggedin">
+    <h1>Window.alert</h1>
+    <main>
+	<p>Klicken Sie auf den Button, wenn Sie wirklich wissen wollen, was dann passiert!</p>
+	<button id="button">Nicht
+		<br>drücken!</button>
+    </main>
+    </body>
+
+</html>
