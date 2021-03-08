@@ -28,6 +28,7 @@ if ($mysqli->query($sql)){
     echo "ERROR: Failed to execute $sql. ";
     $record_added = 0;
 }
+echo $record_added;
 
 ?>
 
@@ -42,10 +43,10 @@ if ($mysqli->query($sql)){
             var record_added = "<?php echo $record_added; ?>"
             function warnung() {
                 alert(record_added)
-                if (record_added == 1){
+                if ($record_added = 1){
                     alert('Records added successfully.')
                     document.location.href = "https://www.simpli-biits.ch/protokoll.php"
-                } else if (record_added == 0) {
+                } else if ($record_added = 0) {
                 alert('ERROR: Failed to execute: '+$sql+'. ')
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else {
