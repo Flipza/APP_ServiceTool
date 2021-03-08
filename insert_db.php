@@ -24,7 +24,7 @@ if (mysqli_query($connect, $sql){
 } else {
     echo "Error";
 }
-alert("Row Inserted!")
+alert("Row Inserted!");
 
 ?>
 <!DOCTYPE html>
