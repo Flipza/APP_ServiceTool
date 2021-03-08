@@ -25,7 +25,7 @@ $query_ma = "SELECT inspector FROM tbl_ma";
 $result_ma = mysqli_query($connect, $query_ma);
 // Standorte SQL
 $query_st = "SELECT standort FROM tbl_ort";
-$result_st = mysqli_query($connect, $query_ma);
+$result_st = mysqli_query($connect, $query_st);
 
 ?>
 <!DOCTYPE html>
