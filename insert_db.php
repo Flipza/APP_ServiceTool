@@ -20,8 +20,8 @@ alert("Row Inserted!");
 */
 if (!empty($sn) || !empty($man) || !empty($mod) || !empty($size) || !empty($year) || !empty($color)) {
     $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
+    $dbUsername = "dbuser";
+    $dbPassword = "NOIU:5678-fghj+9876";
     $dbname = "maintenance_db";
        //create connection
        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
