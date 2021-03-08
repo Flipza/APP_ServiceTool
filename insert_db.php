@@ -41,13 +41,13 @@ if ($mysqli->query($sql)){
         <script>
             function warnung() {
                 if ($record_added = 1){
-                    alert('Records added successfully.');
-                    document.location.href = "https://www.simpli-biits.ch/protokoll.php"; 
+                    alert('Records added successfully.')
+                    document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else if ($record_added = 0)
-                alert('ERROR: Failed to execute: '+$sql+'. ');
-                document.location.href = "https://www.simpli-biits.ch/protokoll.php";
+                alert('ERROR: Failed to execute: '+$sql+'. ')
+                document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else {
-                    alert('Unknown error Occured. Please Contact Admin!'); 
+                    alert('Unknown error Occured. Please Contact Admin!')
                 }
         </script>
 	</head>
