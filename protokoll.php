@@ -110,28 +110,28 @@ $result_st = mysqli_query($connect, $query_st);
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-            <br></br>
-			<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res'/> </p>
-			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res'/> </p>
-			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res'/> </p>
-			<p>Year: <input type='text'  size='40' id='year_res' name='year_res'/> </p>
-			<p>Size: <input type='text'  size='40' id='size_res' name='size_res'/> </p>
-			<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
-			<button type="submit" id="btn_erf">Erfassen</button>
+            	<br></br>
+				<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res'/> </p>
+				<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res'/> </p>
+				<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res'/> </p>
+				<p>Year: <input type='text'  size='40' id='year_res' name='year_res'/> </p>
+				<p>Size: <input type='text'  size='40' id='size_res' name='size_res'/> </p>
+				<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
+				<button type="submit" id="btn_erf">Erfassen</button>
 			</form>
 			<br></br>
 		<h1>Maintenance Glider Protokol</h1>
-		<h3>General</h3>
-		<label for="location">Location: </label>
-		<select name="location" class="dropdown">
+			<h3>General</h3>
+			<label for="location">Location: </label>
+			<select name="location" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_st)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
-		<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
-		<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
-		<label for="inspector">Inspector: </label>
-		<select name="inspector" class="dropdown">
+			<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
+			<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
+			<label for="inspector">Inspector: </label>
+			<select name="inspector" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
