@@ -9,12 +9,12 @@ if (mysqli_connect_errno()) {
 }
 
 // php select option value from database
-$sn = htmlspecialchars($_GET['sn_res']);
-$man = htmlspecialchars($_GET['man_res']);
-$mod = htmlspecialchars($_GET['mod_res']);
-$size = htmlspecialchars($_GET['size_res']);
-$year = htmlspecialchars($_GET['year_res']);
-$color = htmlspecialchars($_GET['color_res']);
+$sn = htmlspecialchars($_POST['sn_res']);
+$man = htmlspecialchars($_POST['man_res']);
+$mod = htmlspecialchars($_POST['mod_res']);
+$size = htmlspecialchars($_POST['size_res']);
+$year = htmlspecialchars($_POST['year_res']);
+$color = htmlspecialchars($_POST['color_res']);
 
 $sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+$sn+", "+$man+", "+$mod+", "+$size+", "+$color+", "+$year+");";
 //$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
