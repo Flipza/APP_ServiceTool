@@ -36,7 +36,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 				$("select.dropdown").change(function(){
         		var selected_sn = $(this).children("option:selected").val();
         		//alert("You have selected the SN: " + selected_sn);
-				$.get("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
+				$.get("http://localhost/var/www/simpli-biits/db_call.php", {selected_sn: selected_sn}, function(data){
 				//var result = data[0];
 				var result = jQuery.parseJSON(data);
 				$('#man_res').val(result);
