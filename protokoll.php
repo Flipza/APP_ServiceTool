@@ -35,7 +35,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 			$(document).ready(function(){
 				$("select.dropdown").change(function(){
         		var selected_sn = $(this).children("option:selected").val();
-        		alert("You have selected the SN: " + selected_sn);
+        		//alert("You have selected the SN: " + selected_sn);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 				$('#man_res').val(data['manufacturer']);
 				$('#mod_res').val(data['model']);
@@ -67,17 +67,12 @@ $result_dropdown = mysqli_query($connect, $query2);
 					<?php endwhile;?>
                 </select>
                 <br></br>
-                <input id='btn1' type="button" value="Auswahl">
             </form>
             <br></br>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
-			<br></br>
 			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res' readonly/> </p>
-			<br></br>
 			<p>Year: <input type='text'  size='40' id='year_res' name='year_res' readonly/> </p>
-			<br></br>
 			<p>Size: <input type='text'  size='40' id='size_res' name='size_res' readonly/> </p>
-			<br></br>
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
         </div>
     </body>
