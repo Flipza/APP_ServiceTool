@@ -39,7 +39,7 @@ $result_dropdown = mysqli_query($connect, $query2);
         		alert("You have selected the SN: " + selected_sn);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
 				$('#man_res').val(data['manufacturer']);
-				//$('#mod_res').val(data['model']);
+				$('#mod_res').val(data['model']);
 				});
 			});
 		});
