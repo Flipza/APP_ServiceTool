@@ -17,10 +17,13 @@ $db_id = mysqli_query($connect, $query2);
 while ($row = mysqli_fetch_array($db_id)) {
     $row_man = $row['manufacturer'];
     $row_mod = $row['model'];
+    $row_size = $row['size'];
+    $row_color = $row['color'];
+    $row_year = $row['year'];
 }
 
 
 //echo $result_dropdown;
-$db_call_return = array("manufacturer"=>$row_man, "model"=>$row_mod);
+$db_call_return = array("manufacturer"=>$row_man, "model"=>$row_mod, "size"=>$row_size, "color"=>$row_color, "year"=>$row_year);
 print json_encode($db_call_return);
 ?>
