@@ -24,9 +24,11 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
 if ($mysqli->query($sql)){
     //echo "Records added successfully.";
     $record_added = 1;
+    return $record_added;
 } else{
     //echo "ERROR: Failed to execute $sql. ";
     $record_added = 0;
+    return $record_added;
 }
 
 ?>
