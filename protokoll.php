@@ -76,7 +76,7 @@ $result_st = mysqli_query($connect, $query_st);
 		</nav>
         <br></br>
         <div>
-		<h2>Deckblatt</h2>
+		<h1>Deckblatt</h1>
             <form method="post" action="">
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown_sn">
@@ -94,7 +94,7 @@ $result_st = mysqli_query($connect, $query_st);
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
 			<button onclick='insertDB()'>Erfassen</button>
 			<br></br>
-		<h2>Maintenance Glider Protokol</h2>
+		<h1>Maintenance Glider Protokol</h1>
 		<h3>General</h3>
 		<label for="location">Location: </label>
 		<select name="location" class="dropdown">
