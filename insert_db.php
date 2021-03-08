@@ -41,12 +41,12 @@ echo $record_added;
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
             var record_added = "<?php echo $record_added; ?>"
-            function warnung() {
+            function warnung(record_added) {
                 alert(record_added)
-                if ($record_added = 1){
+                if (record_added = 1){
                     alert('Records added successfully.')
                     document.location.href = "https://www.simpli-biits.ch/protokoll.php"
-                } else if ($record_added = 0) {
+                } else if (record_added = 0) {
                 alert('ERROR: Failed to execute: '+$sql+'. ')
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else {
