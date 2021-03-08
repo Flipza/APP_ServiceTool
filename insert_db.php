@@ -24,7 +24,7 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
 if ($mysqli->query($sql)){
     //echo "Records added successfully.";
     $record_added = 1;
-} else{
+} else {
     //echo "ERROR: Failed to execute $sql. ";
     $record_added = 0;
 }
@@ -44,12 +44,12 @@ if ($mysqli->query($sql)){
                 if (record_added = 1){
                     alert('Records added successfully.')
                     document.location.href = "https://www.simpli-biits.ch/protokoll.php"
-                } else if (record_added = 0)
+                } else if (record_added = 0) {
                 alert('ERROR: Failed to execute: '+$sql+'. ')
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else {
                     alert('Unknown error Occured. Please Contact Admin!')
-                }
+                }}
         </script>
 	</head>
 	<body class="loggedin">
