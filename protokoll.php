@@ -103,7 +103,7 @@ $result_st = mysqli_query($connect, $query_st);
         <br></br>
         <div>
 		<h1>Deckblatt</h1>
-            <form action="https://www.simpli-biits.ch/insert_db.php" method="POST">
+            <form action="insert_db.php" method="POST">
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown_sn">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
