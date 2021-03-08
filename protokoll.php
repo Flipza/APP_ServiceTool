@@ -79,7 +79,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 		<br></br>
 		<h3>General</h3>
 		<p>Location: <input type='text'  size='40' id='loc_res' name='loc_res' readonly/> </p>
-		<p>Date: <input type='date' id='hasta' value='<?php echo date('Y-m-d');?>'> </p>
+		<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
         </div>
     </body>
 
