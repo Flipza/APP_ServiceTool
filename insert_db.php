@@ -38,7 +38,7 @@ if ($mysqli->query($sql)){
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
             function warnung() {
-                alert('Sie sollten doch nicht drücken!');
+                alert('Records added successfully.');
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php";
                 }
         </script>
@@ -47,8 +47,7 @@ if ($mysqli->query($sql)){
     <h1>Window.alert</h1>
     <main>
 	<p>Klicken Sie auf den Button, wenn Sie wirklich wissen wollen, was dann passiert!</p>
-	<button id="button">Nicht
-		<br>drücken!</button>
+	<button id="button" onclick='warnung()'>OK</button>
     </main>
     </body>
 
