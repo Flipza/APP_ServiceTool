@@ -43,6 +43,7 @@ $result_st = mysqli_query($connect, $query_st);
         		var selected_sn = $(this).children("option:selected").val();
         		//alert("You have selected the SN: " + selected_sn);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
+					$('#sn_res').val(data['serialnumber']);
 					$('#man_res').val(data['manufacturer']);
 					$('#mod_res').val(data['model']);
 					$('#size_res').val(data['size']);
