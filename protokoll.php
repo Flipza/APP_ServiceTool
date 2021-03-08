@@ -15,9 +15,14 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-// php select option value from database
+// Serialnumber SQL
 $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
+$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='selected_sn'";
+$result_dropdown = mysqli_query($connect, $query2);
+// Mitarbeiter SQL
+$query_ma = "SELECT vorname, nachname FROM tbl_ma";
+$result_ma = mysqli_query($connect, $query_ma);
 $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='selected_sn'";
 $result_dropdown = mysqli_query($connect, $query2);
 
@@ -32,19 +37,21 @@ $result_dropdown = mysqli_query($connect, $query2);
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://code.jquery.com/jquery-latest.js"></script>
 		<script>
+			// Serialnumber Dropdownmenue
 			$(document).ready(function(){
-				$("select.dropdown").change(function(){
+				$("select.dropdown_sn").change(function(){
         		var selected_sn = $(this).children("option:selected").val();
         		//alert("You have selected the SN: " + selected_sn);
 				$.getJSON("https://www.simpli-biits.ch/db_call.php", {selected_sn: selected_sn}, function(data){
-				$('#man_res').val(data['manufacturer']);
-				$('#mod_res').val(data['model']);
-				$('#size_res').val(data['size']);
-				$('#color_res').val(data['color']);
-				$('#year_res').val(data['year']);
+					$('#man_res').val(data['manufacturer']);
+					$('#mod_res').val(data['model']);
+					$('#size_res').val(data['size']);
+					$('#color_res').val(data['color']);
+					$('#year_res').val(data['year']);
+					});
 				});
 			});
-		});
+			
 		</script>
 	</head>
 	<body class="loggedin">
@@ -62,7 +69,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 		<h2>Deckblatt</h2>
             <form method="post" action="">
                 <label for="serialnumbers">Serial Number: </label>
-                <select name="serialnumber" class="dropdown">
+                <select name="serialnumber" class="dropdown_sn">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
@@ -80,6 +87,13 @@ $result_dropdown = mysqli_query($connect, $query2);
 		<h3>General</h3>
 		<p>Location: <input type='text'  size='40' id='loc_res' name='loc_res' readonly/> </p>
 		<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
+		<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
+		<label for="inspector">Inspector: </label>
+		<select name="inspector" class="dropdown">
+					<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
+						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+					<?php endwhile;?>
+                </select>
         </div>
     </body>
 
