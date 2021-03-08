@@ -51,7 +51,16 @@ $result_st = mysqli_query($connect, $query_st);
 					});
 				});
 			});
-			
+			function insertDB(){
+				let sn = document.getElementById("sn_res").value;
+				let man = document.getElementById("man_res").value;
+				let mod = document.getElementById("mod_res").value;
+				let size = document.getElementById("size_res").value;
+				let color = document.getElementById("color_res").value;
+				let year = document.getElementById("year_res").value;
+				let sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ('sn', 'man', 'mod', 'size, 'color', 'year,);";
+				alert(sql);
+			}
 		</script>
 	</head>
 	<body class="loggedin">
@@ -76,11 +85,13 @@ $result_st = mysqli_query($connect, $query_st);
                 </select>
             </form>
             <br></br>
+			<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res' readonly/> </p>
 			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
 			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res' readonly/> </p>
 			<p>Year: <input type='text'  size='40' id='year_res' name='year_res' readonly/> </p>
 			<p>Size: <input type='text'  size='40' id='size_res' name='size_res' readonly/> </p>
 			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
+			<button onclick="insertDB()">Erfassen</button>
 			<br></br>
 		<h2>Maintenance Glider Protokol</h2>
 		<h3>General</h3>
