@@ -85,12 +85,12 @@ $result_st = mysqli_query($connect, $query_st);
                 </select>
             </form>
             <br></br>
-			<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res' readonly/> </p>
-			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res' readonly/> </p>
-			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res' readonly/> </p>
-			<p>Year: <input type='text'  size='40' id='year_res' name='year_res' readonly/> </p>
-			<p>Size: <input type='text'  size='40' id='size_res' name='size_res' readonly/> </p>
-			<p>Color: <input type='text'  size='40' id='color_res' name='color_res' readonly/> </p>
+			<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res'/> </p>
+			<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res'/> </p>
+			<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res'/> </p>
+			<p>Year: <input type='text'  size='40' id='year_res' name='year_res'/> </p>
+			<p>Size: <input type='text'  size='40' id='size_res' name='size_res'/> </p>
+			<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
 			<button onclick="insertDB()">Erfassen</button>
 			<br></br>
 		<h2>Maintenance Glider Protokol</h2>
