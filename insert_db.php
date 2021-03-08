@@ -9,9 +9,10 @@ if (mysqli_connect_errno()) {
 }
 
 // php select option value from database
-$selected_sn = ($_REQUEST['selected_sn']);
+$sql = ($_REQUEST['sql']);
 //$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
-$query_sn = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
-$db_id = mysqli_query($connect, $query_sn);
+//$query_sn = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
+$db_id = mysqli_query($connect, $sql);
+alert("Row Inserted!")
 
 ?>
