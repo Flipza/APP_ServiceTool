@@ -20,11 +20,9 @@ $query_sn = "SELECT serialnumber FROM mgp_db";
 $result_sn = mysqli_query($connect, $query_sn);
 $query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='selected_sn'";
 $result_dropdown = mysqli_query($connect, $query2);
-// Mitarbeiter SQL
+// Mitarbeiter SQL 
 $query_ma = "SELECT vorname, nachname FROM tbl_ma";
 $result_ma = mysqli_query($connect, $query_ma);
-$query2 = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='selected_sn'";
-$result_dropdown = mysqli_query($connect, $query2);
 
 
 ?>
@@ -71,6 +69,8 @@ $result_dropdown = mysqli_query($connect, $query2);
                 <label for="serialnumbers">Serial Number: </label>
                 <select name="serialnumber" class="dropdown_sn">
 					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
+						/*<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+						*/
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
                 </select>
@@ -91,7 +91,7 @@ $result_dropdown = mysqli_query($connect, $query2);
 		<label for="inspector">Inspector: </label>
 		<select name="inspector" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
-						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+						<option value="<?php echo $row1[0]+" "+$row1[1];?>"><?php echo $row1[0]+" "+$row1[1];?></option>
 					<?php endwhile;?>
                 </select>
         </div>
