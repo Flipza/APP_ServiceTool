@@ -22,20 +22,10 @@ $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year
 $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
     if ($mysqli->query($sql)){
-        echo "Records added successfully.";
+        alert("Records added successfully.");
+        header('Location: protokoll.php');
     } else{
-        echo "ERROR: Failed to execute $sql. ";
-        echo $sql;
+        alert("ERROR: Failed to execute $sql. ");
     }
-//$sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+$sn+", "+$man+", "+$mod+", "+$size+", "+$color+", "+$year+");";
-//$query2 = "SELECT manufacturer FROM mgp_db WHERE serialnumber='$selected_sn'";
-//$query_sn = "SELECT manufacturer, model, size, color, year FROM mgp_db WHERE serialnumber='$selected_sn'";
-/*if (mysqli_query($connect, $sql){
-    echo "New Record created successfully!";
-} else {
-    echo "Error";
-}
-alert("Row Inserted!");
-*/
 
 ?>

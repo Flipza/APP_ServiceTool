@@ -59,35 +59,6 @@ $result_st = mysqli_query($connect, $query_st);
 					});
 				});
 			});
-			function insertDB(){
-				let sn = document.getElementById("sn_res").value;
-				let man = document.getElementById("man_res").value;
-				let mod = document.getElementById("mod_res").value;
-				let size = document.getElementById("size_res").value;
-				let color = document.getElementById("color_res").value;
-				let year = document.getElementById("year_res").value;
-				let sql = "INSERT INTO mgp_dq (serialnumber, manufacturer, model, size, color, year) VALUES ("+sn+", "+man+", "+mod+", "+size+", "+color+", "+year+");";
-				alert(sql);
-				return sql;
-			}
-			/*
-			$(document).ready(function() {
-  					$("#btn_erf").click(function () {
-					// Val wird Anzeigeelemnet zugewiesen        
-					$.ajax({
-           				type: "POST",
-           				url: "https://www.simpli-biits.ch/insert_db.php",
-           				dataType: "json",
-           				success: function (msg) {
-               				if (msg) {
-                   				alert("Somebody" + name + " was added in list !");
-                   				location.reload(true);
-               					} else {
-                   					alert("Cannot add to list !");
-               						}
-           					}
-					}		
-		*/
 		</script>
 	</head>
 	<body class="loggedin">
