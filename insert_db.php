@@ -22,10 +22,10 @@ $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year
 $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
 if ($mysqli->query($sql)){
-    //echo "Records added successfully.";
+    echo "Records added successfully.";
     $record_added = 1;
 } else {
-    //echo "ERROR: Failed to execute $sql. ";
+    echo "ERROR: Failed to execute $sql. ";
     $record_added = 0;
 }
 
