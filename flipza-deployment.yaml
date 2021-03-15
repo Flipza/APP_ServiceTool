@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: servicetool
+  name: servicetool
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: servicetool
+    spec:
+      containers:
+      - image: flipza/servicetool
+        imagePullPolicy: IfNotPresent
+        name: servicetool
