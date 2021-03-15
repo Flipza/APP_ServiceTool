@@ -19,3 +19,15 @@ spec:
       - image: flipza/servicetool
         imagePullPolicy: IfNotPresent
         name: servicetool
+      env:
+      - name: DATABASE_HOST
+        value: localhost
+      - name: DATABASE_USER 
+        value: dbuser         
+      - name: DATABASE_NAME 
+        value: phplogin
+      - name: DATABASE_PASS 
+        valueFrom:
+         secretKeyRef:
+          name: database-pass
+          key: password        
