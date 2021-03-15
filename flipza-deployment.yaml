@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: servicetool
+    app.kubernetes.io/name: servicetool
   name: servicetool
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: servicetool
+      app.kubernetes.io/name: servicetool
     spec:
       containers:
       - image: flipza/servicetool
