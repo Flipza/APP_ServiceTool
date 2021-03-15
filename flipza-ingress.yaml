@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /\$2
-  name: order
+  name: servicetool
   labels:
     app: servicetool
 spec:
@@ -14,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: order
+            name: servicetool
             port:
               number: 80
