@@ -11,4 +11,4 @@ spec:
     targetPort: 80
   selector:
     app.kubernetes.io/name: servicetool
-  type: LoadBalancer
+  type: LoadBalancer    
