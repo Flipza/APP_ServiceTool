@@ -40,7 +40,8 @@ echo $record_added;
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
-            var record_added = "<?php echo $record_added; ?>"
+            //PROBLEM: If elseif statement funktioniert noch nicht richtig
+            /*var record_added = "<?php echo $record_added; ?>"
             function warnung(record_added) {
                 alert(record_added)
                 if (record_added = 1){
@@ -51,7 +52,7 @@ echo $record_added;
                 document.location.href = "https://www.simpli-biits.ch/protokoll.php"
                 } else {
                     alert('Unknown error Occured. Please Contact Admin!')
-                }}
+                }}*/
         </script>
 	</head>
 	<body class="loggedin">
