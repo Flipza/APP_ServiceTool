@@ -23,13 +23,11 @@ $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
 if ($mysqli->query($sql)){
     echo "Records added successfully.";
-    $record_added = 1;
 } else {
     echo "ERROR: Failed to execute $sql. ";
-    $record_added = 0;
 }
-//echo $record_added;
-header("refresh:10;protokoll.php");
+//Weiterleitung auf dei Protokollseite nach 3 Sekunden
+header("refresh:3;protokoll.php");
 
 ?>
 
@@ -41,26 +39,13 @@ header("refresh:10;protokoll.php");
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <script>
-            //PROBLEM: If elseif statement funktioniert noch nicht richtig
-            /*var record_added = "<?php echo $record_added; ?>"
-            function warnung(record_added) {
-                alert(record_added)
-                if (record_added = 1){
-                    alert('Records added successfully.')
-                    document.location.href = "https://www.simpli-biits.ch/protokoll.php"
-                } else if (record_added = 0) {
-                alert('ERROR: Failed to execute: '+$sql+'. ')
-                document.location.href = "https://www.simpli-biits.ch/protokoll.php"
-                } else {
-                    alert('Unknown error Occured. Please Contact Admin!')
-                }}*/
+
         </script>
 	</head>
 	<body class="loggedin">
-    <h1>Window.alert</h1>
+    <h1>Record Added</h1>
     <main>
-	<p>Klicken Sie auf den Button, wenn Sie wirklich wissen wollen, was dann passiert!</p>
-	<button id="button" onclick='warnung()'>OK</button>
+	<p>Sie werden in kürze auf die Protokollseite umgeleitet. . . </p>
     </main>
     </body>
 
