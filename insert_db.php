@@ -43,7 +43,7 @@ header("refresh:3;protokoll.php");
         </script>
 	</head>
 	<body class="loggedin">
-    <h1>Record Added</h1>
+    <h1></h1>
     <main>
 	<p>Sie werden in kürze auf die Protokollseite umgeleitet. . . </p>
     </main>
