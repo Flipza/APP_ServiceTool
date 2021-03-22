@@ -28,7 +28,8 @@ if ($mysqli->query($sql)){
     echo "ERROR: Failed to execute $sql. ";
     $record_added = 0;
 }
-echo $record_added;
+//echo $record_added;
+header("refresh:10;protokoll.php");
 
 ?>
 
