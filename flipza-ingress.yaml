@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: servicetool
+  labels:
+    app: servicetool
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /servicetool/
+        pathType: Prefix
+        backend:
+          service:
+            name: servicetool
+            port:
+              number: 80
