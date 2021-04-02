@@ -69,11 +69,11 @@ $result_st = mysqli_query($connect, $query_st);
 		<div class="content">
 		<h2>Deckblatt</h2>
 		<div>
-			<p>Your Glider details are below:</p>
+			<p>Search for Serialnumbers in the Search Dropdown. You can enter new Entries with fill all Info within the "Deckblatt" paragraph an press "Erfassen":</p>
 			<form action="insert_db.php" method="POST">
 			<table>
 				<tr>
-					<td>Serialnumber:</td>
+					<td>Search:</td>
 					<td>
 						<!-- Dynamische Dropdown Funkton, welche die Seriennummern der DB auflistet -->
 						<select name="serialnumber" class="dropdown_sn">
