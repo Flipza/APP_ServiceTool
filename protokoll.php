@@ -29,7 +29,7 @@ $result_st = mysqli_query($connect, $query_st);
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://code.jquery.com/jquery-latest.js"></script>
-		<script src=”script.js”></script>
+		<script src=”https://www.simpli-biits.ch/script.js”></script>
 	</head>
 	<body class="loggedin">
 		<nav class="navtop">
