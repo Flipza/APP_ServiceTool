@@ -64,26 +64,6 @@ $result_st = mysqli_query($connect, $query_st);
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
-        <br></br>
-        <div>
-		<h1>Deckblatt</h1>
-            <form action="insert_db.php" method="POST">
-                <label for="serialnumbers">Serial Number: </label>
-				<!-- Dynamische Dropdown Funkton, welche die Seriennummern der DB auflistet -->
-                <select name="serialnumber" class="dropdown_sn">
-					<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
-						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
-					<?php endwhile;?>
-                </select>
-            	<br></br>
-				<p>Serialnumber: <input type='text'  size='40' id='sn_res' name='sn_res'/> </p>
-				<p>Manufacturer: <input type='text'  size='40' id='man_res' name='man_res'/> </p>
-				<p>Model: <input type='text'  size='40' id='mod_res' name='mod_res'/> </p>
-				<p>Year: <input type='text'  size='40' id='year_res' name='year_res'/> </p>
-				<p>Size: <input type='text'  size='40' id='size_res' name='size_res'/> </p>
-				<p>Color: <input type='text'  size='40' id='color_res' name='color_res'/> </p>
-				<button type="submit" id="btn_erf">Erfassen</button>
-			</form>
 			<br></br>
 			<div class="content">
 			<h2>Deckblatt</h2>
@@ -131,6 +111,7 @@ $result_st = mysqli_query($connect, $query_st);
 						<td><button type="submit" id="btn_erf">Erfassen</button></td>
 					</tr>
 				</table>
+				</form>
 			</div>
 		</div>
 
