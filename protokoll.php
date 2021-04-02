@@ -89,7 +89,7 @@ $result_st = mysqli_query($connect, $query_st);
 			<h3>General</h3>
 			<label for="location">Location: </label>
 			<select name="location" class="dropdown">
-					// Dynamische Dropdown Funkton, welche die Standorte der DB auflistet
+					<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
 					<?php while($row1 = mysqli_fetch_array($result_st)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
 					<?php endwhile;?>
@@ -97,7 +97,7 @@ $result_st = mysqli_query($connect, $query_st);
 			<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
 			<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
 			<label for="inspector">Inspector: </label>
-			// Dynamische Dropdown Funkton, welche die Inspektoren der DB auflistet
+			<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
 			<select name="inspector" class="dropdown">
 					<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
 						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
