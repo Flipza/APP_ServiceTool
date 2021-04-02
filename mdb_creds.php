@@ -1,4 +1,5 @@
 <?php
+// Maintenance DB Connection
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'dbuser';
 $DATABASE_PASS = 'NOIU:5678-fghj+9876';

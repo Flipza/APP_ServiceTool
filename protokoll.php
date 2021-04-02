@@ -6,6 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+// DB Connection
 require 'mdb_creds.php';
 
 // Serialnumber SQL

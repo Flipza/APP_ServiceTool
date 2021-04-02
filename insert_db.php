@@ -2,7 +2,6 @@
 // DB Connection
 require 'mdb_creds.php';
 
-
 // php select option value from database
 $sn = $_POST['sn_res'];
 $man = $_POST['man_res'];
@@ -10,7 +9,6 @@ $mod = $_POST['mod_res'];
 $size = $_POST['size_res'];
 $color = $_POST['color_res'];
 $year = $_POST['year_res'];
-
 
 // SQL Statement
 $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year)';
@@ -21,7 +19,7 @@ if ($connect->query($sql)){
 } else {
     echo "ERROR: Failed to execute $sql. ";
 }
-//Weiterleitung auf dei Protokollseite nach 3 Sekunden
+//Forwarding to the protokoll page after 3 seconds
 header("refresh:3;protokoll.php");
 
 ?>
@@ -33,9 +31,6 @@ header("refresh:3;protokoll.php");
 		<title>Update Page</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <script>
-
-        </script>
 	</head>
 	<body class="loggedin">
     <h1></h1>
