@@ -131,12 +131,19 @@ $result_st = mysqli_query($connect, $query_st);
 						<td><input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/></td>
 					</tr>
 					<tr>
-						<td>Notes:</td>
-						<td><?=$notes?></td>
+						<td>Standard:</td>
+						<td><input type='text'  size='40' id='stand_res' name='stand_res' readonly/></td>
 					</tr>
 					<tr>
-						<td>Notes:</td>
-						<td><?=$notes?></td>
+						<td>Inspector:</td>
+						<td>
+							<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
+							<select name="inspector" class="dropdown">
+								<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
+									<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+								<?php endwhile;?>
+                			</select>
+						</td>
 					</tr>
 					<tr>
 						<td>Notes:</td>
