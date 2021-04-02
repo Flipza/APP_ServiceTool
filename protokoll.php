@@ -146,8 +146,28 @@ $result_st = mysqli_query($connect, $query_st);
 						</td>
 					</tr>
 					<tr>
-						<td>Notes:</td>
-						<td><?=$notes?></td>
+						<td>Serialnumber:</td>
+						<td><input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/> </td>
+					</tr>
+					<tr>
+						<td>Manufacturer:</td>
+						<td><input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </td>
+					</tr>
+					<tr>
+						<td>Model:</td>
+						<td><input type='text'  size='40' id='mod_res_ro' name='mod_res' readonly/> </td>
+					</tr>
+					<tr>
+						<td>Year:</td>
+						<td><input type='text'  size='40' id='year_res_ro' name='year_res' readonly/> </td>
+					</tr>
+					<tr>
+						<td>Size:</td>
+						<td><input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </td>
+					</tr>
+					<tr>
+						<td>Color:</td>
+						<td><input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </td>
 					</tr>
 				</table>
 			</div>
