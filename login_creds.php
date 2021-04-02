@@ -1,5 +1,5 @@
 <?php
-// DB Connection. Only needed Once while Login.
+// DB Connection for Loginsystem.
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'dbuser';
 $DATABASE_PASS = 'NOIU:5678-fghj+9876';

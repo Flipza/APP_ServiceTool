@@ -1,19 +1,16 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
+
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'dbuser';
-$DATABASE_PASS = 'NOIU:5678-fghj+9876';
-$DATABASE_NAME = 'phplogin';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
+
+// DB Connection for Loginsystem.
+require 'login_creds.php';
+
 // We don't have the password or notes info stored in sessions so instead we can get the results from the database.
 $stmt = $con->prepare('SELECT password, notes FROM accounts WHERE id = ?');
 // In this case we can use the account ID to get the account info.
