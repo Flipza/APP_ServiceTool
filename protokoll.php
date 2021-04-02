@@ -85,6 +85,56 @@ $result_st = mysqli_query($connect, $query_st);
 				<button type="submit" id="btn_erf">Erfassen</button>
 			</form>
 			<br></br>
+			<div class="content">
+			<h2>Deckblatt</h2>
+			<div>
+				<p>Your Glider details are below:</p>
+				<form action="insert_db.php" method="POST">
+				<table>
+					<tr>
+						<td>Serialnumber:</td>
+						<td>
+							<!-- Dynamische Dropdown Funkton, welche die Seriennummern der DB auflistet -->
+                			<select name="serialnumber" class="dropdown_sn">
+								<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
+									<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+								<?php endwhile;?>
+                			</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Serialnumber:</td>
+						<td><input type='text'  size='40' id='sn_res' name='sn_res'/></td>
+					</tr>
+					<tr>
+						<td>Manufacturer:</td>
+						<td><input type='text'  size='40' id='man_res' name='man_res'/></td>
+					</tr>
+					<tr>
+						<td>Model:</td>
+						<td><input type='text'  size='40' id='mod_res' name='mod_res'/> </td>
+					</tr>
+					<tr>
+						<td>Year:</td>
+						<td><input type='text'  size='40' id='year_res' name='year_res'/> </td>
+					</tr>
+					<tr>
+						<td>Size:</td>
+						<td><input type='text'  size='40' id='size_res' name='size_res'/> </td>
+					</tr>
+					<tr>
+						<td>Color:</td>
+						<td><input type='text'  size='40' id='color_res' name='color_res'/> </td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="submit" id="btn_erf">Erfassen</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
 		<div class="content">
 			<h2>Maintenance Glider Protokol</h2>
 			<div>
