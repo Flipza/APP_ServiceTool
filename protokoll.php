@@ -110,6 +110,23 @@ $result_st = mysqli_query($connect, $query_st);
 			<p>Size: <input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </p>
 			<p>Color: <input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </p>
 		</div>
+		<div>
+				<p>Maintenance Glider Protokoll:</p>
+				<table>
+					<tr>
+						<td>Serialnumber: </td>
+						<td><input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/></td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><?=$password?></td>
+					</tr>
+					<tr>
+						<td>Notes:</td>
+						<td><?=$notes?></td>
+					</tr>
+				</table>
+			</div>
     </body>
 
 </html>
