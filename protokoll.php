@@ -69,7 +69,7 @@ $result_st = mysqli_query($connect, $query_st);
 		<div class="content">
 		<h2>Deckblatt</h2>
 		<div>
-			<p>Search for Serialnumbers in the Search Dropdown. You can enter new Entries with fill all Info within the "Deckblatt" paragraph an press "Erfassen":</p>
+			<p>Search in the dropdown list for already registered paragliders. You can enter new entries by filling in all text boxes and pressing "Enter".:</p>
 			<form action="insert_db.php" method="POST">
 			<table>
 				<tr>
@@ -109,7 +109,7 @@ $result_st = mysqli_query($connect, $query_st);
 				</tr>
 				<tr>
 					<td></td>
-					<td><button type="submit" id="btn_erf">Erfassen</button></td>
+					<td><button type="submit" id="btn_erf">Enter new Entry</button></td>
 				</tr>
 			</table>
 			</form>
