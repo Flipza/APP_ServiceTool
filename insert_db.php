@@ -21,9 +21,7 @@ if ($connect->query($sql)){
 }
 //Forwarding to the protokoll page after 3 seconds
 header("refresh:3;protokoll.php");
-
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>

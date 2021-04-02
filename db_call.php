@@ -1,4 +1,5 @@
 <?php
+// DB Connection
 require 'mdb_creds.php';
 // php select option value from database
 $selected_sn = ($_REQUEST['selected_sn']);
