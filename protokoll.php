@@ -115,9 +115,9 @@ $result_st = mysqli_query($connect, $query_st);
 			<div>
 				<p>Your Glider details are below:</p>
 				<table>
-					<tr>
+					<tr for="location">
 						<td>Location:</td>
-						<td for="location">
+						<td>
 							<select name="location" class="dropdown">
 								<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
 								<?php while($row3 = mysqli_fetch_array($result_st)):;?>
