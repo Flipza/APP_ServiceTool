@@ -69,7 +69,7 @@ $result_st = mysqli_query($connect, $query_st);
 		<div class="content">
 		<h2>Deckblatt</h2>
 		<div>
-			<p>Search in the dropdown list for already registered paragliders. You can enter new entries by filling in all text boxes and pressing "Enter".:</p>
+			<p>Search in the dropdown list for already registered paragliders. You can enter new entries by filling in all text boxes and pressing "Enter":</p>
 			<form action="insert_db.php" method="POST">
 			<table>
 				<tr>
