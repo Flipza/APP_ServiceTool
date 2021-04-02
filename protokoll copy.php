@@ -85,6 +85,31 @@ $result_st = mysqli_query($connect, $query_st);
 				<button type="submit" id="btn_erf">Erfassen</button>
 			</form>
 			<br></br>
+		<h1>Maintenance Glider Protokol</h1>
+			<h3>General</h3>
+			<label for="location">Location: </label>
+			<select name="location" class="dropdown">
+					<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
+					<?php while($row1 = mysqli_fetch_array($result_st)):;?>
+						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+					<?php endwhile;?>
+                </select>
+			<p>Date: <input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/> </p>
+			<p>Standard: <input type='text'  size='40' id='stand_res' name='stand_res' readonly/> </p>
+			<label for="inspector">Inspector: </label>
+			<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
+			<select name="inspector" class="dropdown">
+					<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
+						<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+					<?php endwhile;?>
+                </select>
+			<p>Serialnumber: <input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/> </p>
+			<p>Manufacturer: <input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </p>
+			<p>Model: <input type='text'  size='40' id='mod_res_ro' name='mod_res' readonly/> </p>
+			<p>Year: <input type='text'  size='40' id='year_res_ro' name='year_res' readonly/> </p>
+			<p>Size: <input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </p>
+			<p>Color: <input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </p>
+		</div>
 		<div class="content">
 			<h2>Maintenance Glider Protokol</h2>
 			<div>
