@@ -127,8 +127,16 @@ $result_st = mysqli_query($connect, $query_st);
 						</td>
 					</tr>
 					<tr>
-						<td>Password:</td>
-						<td><?=$password?></td>
+						<td>Date:</td>
+						<td><input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/></td>
+					</tr>
+					<tr>
+						<td>Notes:</td>
+						<td><?=$notes?></td>
+					</tr>
+					<tr>
+						<td>Notes:</td>
+						<td><?=$notes?></td>
 					</tr>
 					<tr>
 						<td>Notes:</td>
