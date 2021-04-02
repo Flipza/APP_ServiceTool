@@ -120,8 +120,8 @@ $result_st = mysqli_query($connect, $query_st);
 						<td>
 							<select name="location" class="dropdown">
 								<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
-								<?php while($row1 = mysqli_fetch_array($result_st)):;?>
-									<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+								<?php while($row3 = mysqli_fetch_array($result_st)):;?>
+									<option value="<?php echo $row3[0];?>"><?php echo $row3[0];?></option>
 								<?php endwhile;?>
                 			</select>
 						</td>
