@@ -117,7 +117,7 @@ $result_st = mysqli_query($connect, $query_st);
 				<table>
 					<tr>
 						<td>Location:</td>
-						<td>
+						<td for="location">
 							<select name="location" class="dropdown">
 								<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
 								<?php while($row3 = mysqli_fetch_array($result_st)):;?>
