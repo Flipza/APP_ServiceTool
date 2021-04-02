@@ -64,120 +64,120 @@ $result_st = mysqli_query($connect, $query_st);
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
-			<br></br>
-			<div class="content">
-			<h2>Deckblatt</h2>
-			<div>
-				<p>Your Glider details are below:</p>
-				<form action="insert_db.php" method="POST">
-				<table>
-					<tr>
-						<td>Serialnumber:</td>
-						<td>
-							<!-- Dynamische Dropdown Funkton, welche die Seriennummern der DB auflistet -->
-                			<select name="serialnumber" class="dropdown_sn">
-								<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
-									<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
-								<?php endwhile;?>
-                			</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Serialnumber:</td>
-						<td><input type='text'  size='40' id='sn_res' name='sn_res'/></td>
-					</tr>
-					<tr>
-						<td>Manufacturer:</td>
-						<td><input type='text'  size='40' id='man_res' name='man_res'/></td>
-					</tr>
-					<tr>
-						<td>Model:</td>
-						<td><input type='text'  size='40' id='mod_res' name='mod_res'/> </td>
-					</tr>
-					<tr>
-						<td>Year:</td>
-						<td><input type='text'  size='40' id='year_res' name='year_res'/> </td>
-					</tr>
-					<tr>
-						<td>Size:</td>
-						<td><input type='text'  size='40' id='size_res' name='size_res'/> </td>
-					</tr>
-					<tr>
-						<td>Color:</td>
-						<td><input type='text'  size='40' id='color_res' name='color_res'/> </td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><button type="submit" id="btn_erf">Erfassen</button></td>
-					</tr>
-				</table>
-				</form>
-			</div>
-		</div>
-
-
+		<br></br>
+		<!-- General Info, Get and Add Records from Database -->
 		<div class="content">
-			<h2>Maintenance Glider Protokol</h2>
-			<div>
-				<p>Your Glider details are below:</p>
-				<table>
-					<tr for="location">
-						<td>Location:</td>
-						<td>
-							<select name="location" class="dropdown">
-								<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
-								<?php while($row3 = mysqli_fetch_array($result_st)):;?>
-									<option value="<?php echo $row3[0];?>"><?php echo $row3[0];?></option>
-								<?php endwhile;?>
-                			</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Date:</td>
-						<td><input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/></td>
-					</tr>
-					<tr>
-						<td>Standard:</td>
-						<td><input type='text'  size='40' id='stand_res' name='stand_res' readonly/></td>
-					</tr>
-					<tr>
-						<td>Inspector:</td>
-						<td>
-							<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
-							<select name="inspector" class="dropdown">
-								<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
-									<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
-								<?php endwhile;?>
-                			</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Serialnumber:</td>
-						<td><input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/> </td>
-					</tr>
-					<tr>
-						<td>Manufacturer:</td>
-						<td><input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </td>
-					</tr>
-					<tr>
-						<td>Model:</td>
-						<td><input type='text'  size='40' id='mod_res_ro' name='mod_res' readonly/> </td>
-					</tr>
-					<tr>
-						<td>Year:</td>
-						<td><input type='text'  size='40' id='year_res_ro' name='year_res' readonly/> </td>
-					</tr>
-					<tr>
-						<td>Size:</td>
-						<td><input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </td>
-					</tr>
-					<tr>
-						<td>Color:</td>
-						<td><input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </td>
-					</tr>
-				</table>
-			</div>
+		<h2>Deckblatt</h2>
+		<div>
+			<p>Your Glider details are below:</p>
+			<form action="insert_db.php" method="POST">
+			<table>
+				<tr>
+					<td>Serialnumber:</td>
+					<td>
+						<!-- Dynamische Dropdown Funkton, welche die Seriennummern der DB auflistet -->
+						<select name="serialnumber" class="dropdown_sn">
+							<?php while($row1 = mysqli_fetch_array($result_sn)):;?>
+								<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+							<?php endwhile;?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Serialnumber:</td>
+					<td><input type='text'  size='40' id='sn_res' name='sn_res'/></td>
+				</tr>
+				<tr>
+					<td>Manufacturer:</td>
+					<td><input type='text'  size='40' id='man_res' name='man_res'/></td>
+				</tr>
+				<tr>
+					<td>Model:</td>
+					<td><input type='text'  size='40' id='mod_res' name='mod_res'/> </td>
+				</tr>
+				<tr>
+					<td>Year:</td>
+					<td><input type='text'  size='40' id='year_res' name='year_res'/> </td>
+				</tr>
+				<tr>
+					<td>Size:</td>
+					<td><input type='text'  size='40' id='size_res' name='size_res'/> </td>
+				</tr>
+				<tr>
+					<td>Color:</td>
+					<td><input type='text'  size='40' id='color_res' name='color_res'/> </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit" id="btn_erf">Erfassen</button></td>
+				</tr>
+			</table>
+			</form>
 		</div>
-    </body>
+	</div>
+<!-- Maintenance Glider Protokoll -->
+	<div class="content">
+		<h2>Maintenance Glider Protokol</h2>
+		<div>
+			<p>Your Glider details are below:</p>
+			<table>
+				<tr for="location">
+					<td>Location:</td>
+					<td>
+						<select name="location" class="dropdown">
+							<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
+							<?php while($row3 = mysqli_fetch_array($result_st)):;?>
+								<option value="<?php echo $row3[0];?>"><?php echo $row3[0];?></option>
+							<?php endwhile;?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Date:</td>
+					<td><input type='date' id='date_res' value='<?php echo date('Y-m-d');?>'/></td>
+				</tr>
+				<tr>
+					<td>Standard:</td>
+					<td><input type='text'  size='40' id='stand_res' name='stand_res' readonly/></td>
+				</tr>
+				<tr>
+					<td>Inspector:</td>
+					<td>
+						<!--Dynamische Dropdown Funkton, welche die Standorte der DB auflistet -->
+						<select name="inspector" class="dropdown">
+							<?php while($row1 = mysqli_fetch_array($result_ma)):;?>
+								<option value="<?php echo $row1[0];?>"><?php echo $row1[0];?></option>
+							<?php endwhile;?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Serialnumber:</td>
+					<td><input type='text'  size='40' id='sn_res_ro' name='sn_res' readonly/> </td>
+				</tr>
+				<tr>
+					<td>Manufacturer:</td>
+					<td><input type='text'  size='40' id='man_res_ro' name='man_res' readonly/> </td>
+				</tr>
+				<tr>
+					<td>Model:</td>
+					<td><input type='text'  size='40' id='mod_res_ro' name='mod_res' readonly/> </td>
+				</tr>
+				<tr>
+					<td>Year:</td>
+					<td><input type='text'  size='40' id='year_res_ro' name='year_res' readonly/> </td>
+				</tr>
+				<tr>
+					<td>Size:</td>
+					<td><input type='text'  size='40' id='size_res_ro' name='size_res' readonly/> </td>
+				</tr>
+				<tr>
+					<td>Color:</td>
+					<td><input type='text'  size='40' id='color_res_ro' name='color_res' readonly/> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
 
 </html>
