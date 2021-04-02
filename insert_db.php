@@ -1,11 +1,6 @@
 <?php
 // DB Connection
-$mysqli = new mysqli("localhost","dbuser","NOIU:5678-fghj+9876","maintenance_db");
-// Check connection
-if ($mysqli -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    exit();
-  } 
+require 'mdb_creds.php';
 
 
 // php select option value from database
@@ -21,7 +16,7 @@ $year = $_POST['year_res'];
 $sql = 'INSERT INTO mgp_db (serialnumber, manufacturer, model, size, color, year)';
 $sql .=" VALUES ('$sn', '$man', '$mod', '$size', '$color', '$year')";
     
-if ($mysqli->query($sql)){
+if ($connect->query($sql)){
     echo "Records added successfully.";
 } else {
     echo "ERROR: Failed to execute $sql. ";
